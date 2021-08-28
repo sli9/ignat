@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 280px;
+    transition-duration: 500ms;
+    transform: translate(-245px);
+}
+.menu:hover  {
+    transition-duration: 2000ms;
+    transform: translate(0);
+}
+
+.btn {
+    width: 15px;
+    height: 15px;
+    background-color: #282c34;
+    margin: 5px;
+}
+.active {
+    color: darkblue;
+}
