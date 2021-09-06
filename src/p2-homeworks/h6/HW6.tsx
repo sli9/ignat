@@ -12,6 +12,9 @@ function HW6() {
     const restore = () => {
        setValue(restoreState('editable-span-value','')) // setValue()
     }
+    const clear = () => {
+        localStorage.clear()
+    }
 
     return (
         <div>
@@ -28,6 +31,7 @@ function HW6() {
             </div>
             <SuperButton onClick={save}>save</SuperButton>
             <SuperButton onClick={restore}>restore</SuperButton>
+            <SuperButton onClick={clear}>clearStore</SuperButton>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
