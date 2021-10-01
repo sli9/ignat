@@ -1,14 +1,19 @@
 import React from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import {useDispatch, useSelector} from "react-redux";
+import {AppStoreType} from "./bll/store";
+import {loadingAC} from "./bll/loadingReducer";
 
 function HW10() {
-    // useSelector, useDispatch
-    const loading = false
+    const loading = useSelector<AppStoreType, boolean>(state => state.loading.loading)
+    const dispatch = useDispatch()// useSelector, useDispatch
 
-    const setLoading = () => {
-        // dispatch
-        // setTimeout
-        console.log('loading...')
+    const setLoading = () => {debugger
+        dispatch(loadingAC(true))// dispatch
+        setTimeout(()=>{
+            dispatch(loadingAC(false))
+        }, 3000)// setTimeout
+        // console.log(loading)
     };
 
     return (
