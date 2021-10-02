@@ -2,7 +2,7 @@ const initState = {
     loading: false
 }
 
-export const loadingReducer = (state = initState, action: loadingACType): typeof initState => { debugger// fix any
+export const loadingReducer = (state = initState, action: loadingACType): typeof initState => { // fix any
     switch (action.type) {
         case 'IS-LOADING': {
             return {...state, loading: action.loading}
